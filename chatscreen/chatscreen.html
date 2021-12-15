@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Walkover Inc</title>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style type="text/css">
+		.box{
+			width:1000px;
+			height:580px;
+			border-radius: 5px;
+			box-shadow: var(--shadow);
+			position: absolute;
+			top: 10%;
+			left:15%;
+			display: flex;
+			background-color: white;
+		}
+		body{
+			background-color: black;
+		}
+		.left{
+			width:300px;
+			height:580px;
+			border-right: 1px solid green;
+		}
+		.right{
+			height:580px;
+			width:calc(1000px-300px);
+		}
+		.top{
+			font-family: bold;
+			display: flex;
+			align-items: center;
+			height:50px;
+			justify-content: space-around;
+			border-bottom: 1px solid green;
+		}
+		.search{
+			font-family: bold;
+			display: flex;
+			align-items: center;
+			height:50px;
+			justify-content: space-around;
+			border-bottom: 1px solid green;
+		}
+		.ico{
+			background: var(--g);
+			padding: 5px;
+			border-radius: 5px;
+		}
+		.icon1{
+			width:28px;
+			height:28px;
+		}
+		.in{
+			background: var(--c);
+			padding: 5px 10px;
+			border-radius: 5px;
+			width:250px;
+		}
+		.dp{
+			width: 40px;
+			height: 40px;
+			border-radius: 50px;
+			margin-top: -10px;
+		}
+		li{
+			list-style: none;
+		}
+		.friend{
+			display: flex;
+			align-items: center;
+			height: 60px;
+			transition: 0.5s ease;
+			margin-left: -30px;
+			border-bottom: 1px solid black;
+			
+		}
+		.img_name{
+			display: flex;
+			align-items: center;
+			margin-top: 8px;
+		}
+		h3{
+			font-size: 16px;
+			font-family: f;
+			margin-left: 7px;
+		}
+		p{
+			margin-left: 7px;
+			color:grey;
+			font-size: 11px;
+		}
+		.friend:hover{
+			background: lightblue;
+		}
+		ul{
+			height: calc(580px - 100px);
+			overflow-y: auto; 
+		}
+		span{
+			color:green;
+		}
+		.right_top{
+			font-family: bold;
+			display: flex;
+			height:50px;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid green;
+			width:calc(1000px - 300px);
+		}
+		.mid{
+			height:calc(580px - 100px);
+			width:100%;
+			border-bottom: 1px solid green;
+			overflow-y: auto;
+		}
+		.btm{
+			height:50px;
+			width:100%;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+
+		}
+		form{
+			width:90%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 40px;
+			border-radius: 5px;
+			border:1px solid lightgrey;
+
+		}
+		.send{
+			height: 25px;
+			width:25px;
+		}
+		.in2{
+			margin-left: -40px;
+			width:350px;
+		}
+		.me{
+			background: lightyellow;
+			padding:5px;
+			border-radius: 5px;
+			max-width: 80%;
+			float:right;
+			color:black;
+			display: table;
+			clear: both;
+			margin:10px;
+		}
+		.you{
+			background: grey;
+			margin:10px;
+			max-width: 80%;
+			display: table;
+			float: left;
+			clear: both;
+			padding:5px;
+			color:black;
+			border-radius: 5px;
+		}
+		.para{
+			color:black;
+			font-size: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="left">
+			<div class="top"><h3>Walkover Inc</h3></div>
+			<div class="search">
+				<input class="in" type="text" placeholder="search for member and co...">
+				<div class="ico">
+					<img src="searchImage2.png" class="icon1">
+				</div>
+			</div>
+			<ul>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="5.jpg" class="dp">
+							<div>
+							<h3>ashish Yadav</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="2.jpg" class="dp">
+							<div>
+							<h3>ABC university</h3>
+							<p><span>Typing...</span></p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="6.jpg" class="dp">
+							<div>
+							<h3>Shreya Yadav</h3>
+							<p><span>Typing...</span></p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="2.jpg" class="dp">
+							<div>
+							<h3>Vishnu Yadav</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="4.jpg" class="dp">
+							<div>
+							<h3>Vijaya Badana</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="5.jpg" class="dp">
+							<div>
+							<h3>Cse main group</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="4.jpg" class="dp">
+							<div>
+							<h3>CSE updates</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="2.jpg" class="dp">
+							<div>
+							<h3>Walkover_inc_official</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="6.jpg" class="dp">
+							<div>
+							<h3>Team5</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="5.jpg" class="dp">
+							<div>
+							<h3>Infrastructure</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="4.jpg" class="dp">
+							<div>
+							<h3>Home</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="6.jpg" class="dp">
+							<div>
+							<h3>Sweety</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="4.jpg" class="dp">
+							<div>
+							<h3>Sister</h3>
+							<p>Do we have meeting sir??</p>
+						</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="right_top">
+				<div class="img_name">
+							<img src="2.jpg" class="dp">
+							<div>
+							<h3>ABC university</h3>
+							<p><span>Typing...</span></p>
+						</div>
+					</div>
+			</div>
+			<div class="mid">
+				<div class="me"><p class="para">Hai sir...Iam from CSE section-A</div>
+				<div class="you"><p class="para">Hai...what's your problem??</p></div>
+				<div class="you"><p class="para">Hai...what's your problem??</p></div>
+				<div class="you"><p class="para">Hai...what's your problem??</p></div>
+				<div class="me"><p class="para">I have a doubt sir</p></div>
+				<div class="you"><p class="para">Then tell me...</p></div>
+				<div class="me"><p class="para">are MNC'S are good for freshers??</p></div>
+				<div class="you"><p class="para">Why?Have you selected in any company?? </p></div>
+				<div class="me"><p class="para">Yes sir... </p></div>
+				<div class="you"><P class="para">Ohh...congrats</P></div>
+				<div class="you"><p class="para">Why?Have you selected in any company?? </p></div>
+				<div class="you"><p class="para">Why?Have you selected in any company?? </p></div>
+				<div class="you"><p class="para">Why?Have you selected in any company?? </p></div>
+				<div class="you"><p class="para">Why?Have you selected in any company?? </p></div>
+			</div>
+
+			<div class="btm">
+				<form>
+					<div class="plus"><b>+</b></div>
+					<input type="text" name="" placeholder="Enter text..." class="in2">
+					<div class="ico2"><img src="send.jpg" class="send"></div>
+					<div class="ico3"><img src="aa.jpg" class="send"></div>
+					<div class="ico4"><b>@</b></div>
+					<div class=
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
